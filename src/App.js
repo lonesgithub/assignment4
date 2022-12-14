@@ -8,12 +8,14 @@ import TranslationPage from "./Pages/TranslationPage";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import PageTemplate from "./Pages/PageTemplate";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <Header />
+        <Navbar />
         <Routes>
           <Route path="/" element={<StartupPage />} />
           <Route path="/profile" element={<ProfilePage />} />

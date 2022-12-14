@@ -39,6 +39,11 @@ main {
   background-color: $pale-spring-bud;
   height: 100vh;
 }
+.translated {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
