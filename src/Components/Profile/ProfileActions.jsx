@@ -38,13 +38,14 @@ const ProfileActions = () => {
   return (
     <ul>
       <li>
-        <Link to="/translate">Translate</Link>
+        <button onClick={handleClearHistoryClick} className="btns">
+          Clear history
+        </button>
       </li>
       <li>
-        <button onClick={handleClearHistoryClick}>Clear history</button>
-      </li>
-      <li>
-        <button onClick={handleLogOutClick}>Log out</button>
+        <button onClick={handleLogOutClick} className="btns">
+          Log out
+        </button>
       </li>
     </ul>
   );

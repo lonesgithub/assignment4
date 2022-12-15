@@ -13,10 +13,10 @@ const Navbar = () => {
       {user !== null && (
         <ul>
           <li>
-            <NavLink to="/translation">Translation</NavLink>
+            <NavLink to="/translation">New translation</NavLink>
           </li>
           <li>
-            <NavLink to="/profile">Profile</NavLink>
+            <NavLink to="/profile">My Profile</NavLink>
           </li>
         </ul>
       )}

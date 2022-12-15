@@ -4,6 +4,11 @@ $pale-spring-bud-2: #dde7c7ff;
 $cambridge-blue: #bfd8bdff;
 $eton-blue: #98c9a3ff;
 $eton-blue-2: #77bfa3ff;
+$orange-peel: #ff9f1cff;
+$mellow-apricot: #ffbf69ff;
+$white: #ffffffff;
+$light-cyan: #cbf3f0ff;
+$tiffany-blue: #2ec4b6ff;
 
 .App {
   text-align: center;
@@ -20,9 +25,29 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: $eton-blue-2;
-  height: 4rem;
+  background-color: $eton-blue;
+  height: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
+
+ul {
+  display: flex;
+  list-style: none;
+}
+li {
+  margin: 1rem;
+}
+
+nav li a {
+  text-decoration: none;
+  color: black;
+}
+nav li a:hover {
+  text-decoration: none;
+  color: $mellow-apricot;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -32,13 +57,29 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $eton-blue-2;
-  height: 4rem;
+  background-color: $eton-blue;
+  height: 5rem;
 }
-main {
+
+.btns {
+  background-color: $mellow-apricot;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 5px 20px 5px;
+  border-color: $orange-peel;
+  height: 3rem;
+}
+.pagetemplate {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: $pale-spring-bud;
+  height: 100vh;
+}
+.profilepage {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   background-color: $pale-spring-bud;
   height: 100vh;

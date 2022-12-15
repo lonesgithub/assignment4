@@ -25,12 +25,13 @@ const ProfilePage = () => {
 
   return (
     <>
-      <h1>ProfilePage</h1>
-      <ProfileHeader username={user.username} />
-      <ProfileActions />
-      <ProfileTranslationHistory translations={user.translations} />
+      <main className="container-fluid profilepage">
+        <ProfileHeader username={user.username} />
+        <ProfileActions />
+        <ProfileTranslationHistory translations={user.translations} />
+      </main>
     </>
   );
 };
 
-export default PageTemplate(withAuth(ProfilePage));
+export default withAuth(ProfilePage);

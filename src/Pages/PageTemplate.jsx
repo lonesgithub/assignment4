@@ -23,7 +23,7 @@ const PageTemplate = (Component) => (props) => {
   // };
 
   return (
-    <main className="container-fluid">
+    <main className="container-fluid pagetemplate">
       <Component {...props}> </Component>
     </main>
   );

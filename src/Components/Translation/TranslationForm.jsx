@@ -24,7 +24,9 @@ const TranslationForm = ({ setInputPhrase, onTranslate }) => {
           placeholder="What do you want to translate?"
         />
       </fieldset>
-      <button type="submit">Translate now</button>
+      <button type="submit" className="btns">
+        Translate now
+      </button>
     </form>
   );
 };

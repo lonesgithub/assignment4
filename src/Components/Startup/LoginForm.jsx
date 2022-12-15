@@ -78,7 +78,7 @@ const LoginForm = () => {
           />
           {errorMessage}
         </fieldset>
-        <button type="submit" disabled={loading}>
+        <button type="submit" disabled={loading} className="btns">
           Continue
         </button>
         {loading && <p>Logging in...</p>}
