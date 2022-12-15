@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-import SignItem from "./SignItem";
 
 const TranslationForm = ({ setInputPhrase, onTranslate }) => {
   const {
@@ -14,17 +13,23 @@ const TranslationForm = ({ setInputPhrase, onTranslate }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <fieldset>
-        <label htmlFor="phrase">Translation frase here:</label>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="form-container row gy-4 d-flex justify-content-center"
+    >
+      <fieldset className="col-12 col-md-9 ">
+        {/* <label htmlFor="phrase" className="d-none ">
+          Translation frase here:
+        </label> */}
         <input
           type="text"
           {...register("phrase")}
           id="phrase"
-          placeholder="What do you want to translate?"
+          placeholder="Translate something..."
+          className="input-translation px-4 "
         />
       </fieldset>
-      <button type="submit" className="btns">
+      <button type="submit" className="btns col-8 col-md-3  mx-sm-0">
         Translate now
       </button>
     </form>

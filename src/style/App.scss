@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap");
+
 /* SCSS HEX */
 $pale-spring-bud: #edeec9ff;
 $pale-spring-bud-2: #dde7c7ff;
@@ -13,6 +16,8 @@ $tiffany-blue: #2ec4b6ff;
 .App {
   text-align: center;
   color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
 }
 
 .App-logo {
@@ -60,6 +65,21 @@ footer {
   background-color: $eton-blue;
   height: 5rem;
 }
+.headerh1 {
+  font-size: 4rem;
+  font-family: "Patrick Hand", cursive;
+}
+.headerh2 {
+  font-size: 3rem;
+  font-family: "Patrick Hand", cursive;
+}
+
+.input-translation {
+  min-height: 3rem;
+  margin-right: 2rem;
+  width: 100%;
+  border-radius: 50px;
+}
 
 .btns {
   background-color: $mellow-apricot;
@@ -75,19 +95,28 @@ footer {
   justify-content: center;
   align-items: center;
   background-color: $pale-spring-bud;
-  height: 100vh;
+  min-height: calc(100vh - 10rem);
 }
+
 .profilepage {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $pale-spring-bud;
-  height: 100vh;
+  min-height: calc(100vh - 10rem);
 }
 .translated {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: black;
+  margin-top: 4rem;
+  padding: 2rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav>
       <header>
-        <h1>Translations</h1>
+        <h1 className="headerh1">Translations</h1>
       </header>
 
       {/* For logged in users only */}

@@ -30,12 +30,19 @@ const TranslationPage = () => {
   };
 
   return (
-    <div>
+    <div className="container">
+      <h2 className="headerh2 mb-5">What do you want to translate?</h2>
       <TranslationForm
         setInputPhrase={setInputPhrase}
         onTranslate={handleTranslateClicked}
+        className="container"
       />
-      {inputPhrase ? <TranslationResult inputPhrase={inputPhrase} /> : null}
+      {inputPhrase ? (
+        <TranslationResult
+          inputPhrase={inputPhrase}
+          className="translation-result"
+        />
+      ) : null}
     </div>
   );
 };

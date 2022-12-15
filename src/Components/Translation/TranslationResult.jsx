@@ -131,6 +131,11 @@ const SIGNS = [
     letter: "z",
     image: "images/signs/z.png",
   },
+  {
+    id: " ",
+    letter: " ",
+    image: "images/signs/blank.png",
+  },
 ];
 
 const TranslationResult = ({ inputPhrase }) => {
@@ -141,18 +146,7 @@ const TranslationResult = ({ inputPhrase }) => {
   lowerCaseArray.forEach((letter) => {
     newArray.push(SIGNS.find((sign) => sign.id === letter));
   });
-
-  // const translatedPhrase = lowerCaseArray.map((letter, index) => {
-  //   return <p key={letter + index}>{letter}</p>;
-  // });
-
-  // const translation = inputPhrase.map((letter) => {
-  //   return <p>letter</p>;
-  // });
-
-  // const alphabet = SIGNS.map((sign) => {
-  //   return <SignItem key={sign.id} letter={sign.letter} image={sign.image} />;
-  // });
+  console.log(newArray);
 
   const translated = newArray.map((sign, index) => {
     return (

@@ -3,8 +3,7 @@ import LoginForm from "../Components/Startup/LoginForm";
 const StartupPage = () => {
   return (
     <>
-      <h1>Lost in translation</h1>
-      <p>Let's get started</p>
+      <h2 className="headerh2">Let's get started</h2>
       <LoginForm />
     </>
   );
