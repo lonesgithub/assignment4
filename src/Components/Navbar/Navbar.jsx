@@ -5,9 +5,9 @@ const Navbar = () => {
   const { user } = useUser();
   return (
     <nav>
-      <ul>
-        <li>Translations</li>
-      </ul>
+      <header>
+        <h1>Translations</h1>
+      </header>
 
       {/* For logged in users only */}
       {user !== null && (

@@ -27,9 +27,6 @@ const TranslationPage = () => {
     storageSave(STORAGE_KEY_USER, updatedUser);
     //Update context state
     setUser(updatedUser); //updated is the whole user object here, which is updated with new translations
-
-    console.log("Error", error);
-    console.log("updated user", updatedUser);
   };
 
   return (
@@ -43,4 +40,4 @@ const TranslationPage = () => {
   );
 };
 
-export default withAuth(TranslationPage);
+export default PageTemplate(withAuth(TranslationPage));

@@ -33,4 +33,4 @@ const ProfilePage = () => {
   );
 };
 
-export default withAuth(ProfilePage);
+export default PageTemplate(withAuth(ProfilePage));

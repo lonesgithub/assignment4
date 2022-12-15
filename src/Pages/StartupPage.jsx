@@ -9,4 +9,4 @@ const StartupPage = () => {
   );
 };
 
-export default StartupPage;
+export default PageTemplate(StartupPage);

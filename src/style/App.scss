@@ -15,13 +15,17 @@ $eton-blue-2: #77bfa3ff;
   pointer-events: none;
 }
 
-header {
+nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: $eton-blue-2;
   height: 4rem;
+}
+header {
+  display: flex;
+  flex-direction: row;
 }
 footer {
   display: flex;

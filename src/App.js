@@ -14,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        {/* <Header /> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<StartupPage />} />

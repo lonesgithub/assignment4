@@ -9,13 +9,18 @@
   pointer-events: none;
 }
 
-header {
+nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   background-color: #77bfa3ff;
   height: 4rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
 }
 
 footer {

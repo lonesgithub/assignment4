@@ -24,7 +24,7 @@ const PageTemplate = (Component) => (props) => {
 
   return (
     <main className="container-fluid">
-      <p>fsjflks sfsfs fsf sdfsdfsfjf</p>
+      <Component {...props}> </Component>
     </main>
   );
 };
