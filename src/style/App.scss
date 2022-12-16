@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap");
+
+/* SCSS HEX */
+$pale-spring-bud: #edeec9ff;
+$pale-spring-bud-2: #dde7c7ff;
+$cambridge-blue: #bfd8bdff;
+$eton-blue: #98c9a3ff;
+$eton-blue-2: #77bfa3ff;
+$orange-peel: #ff9f1cff;
+$mellow-apricot: #ffbf69ff;
+$white: #ffffffff;
+$light-cyan: #cbf3f0ff;
+$tiffany-blue: #2ec4b6ff;
+
+.App {
+  text-align: center;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $eton-blue;
+  height: 5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 0 !important;
+}
+li {
+  margin: 1rem;
+}
+
+nav li a {
+  text-decoration: none;
+  color: black;
+}
+nav li a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $eton-blue;
+  height: 5rem;
+}
+.headerh1 {
+  font-size: 4rem;
+  font-family: "Patrick Hand", cursive;
+}
+.headerh2 {
+  font-size: 3rem;
+  font-family: "Patrick Hand", cursive;
+}
+.headerh3 {
+  font-size: 2rem;
+  font-family: "Patrick Hand", cursive;
+}
+
+.input-translation {
+  min-height: 3rem;
+  margin-right: 2rem;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.btns {
+  background-color: $mellow-apricot;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 5px 20px 5px;
+  border-color: $orange-peel;
+  height: 3rem;
+}
+.btns:hover {
+  background-color: $orange-peel;
+}
+
+.pagetemplate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $pale-spring-bud;
+  min-height: calc(100vh - 10rem);
+}
+
+.profilepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $pale-spring-bud;
+  min-height: calc(100vh - 10rem);
+}
+.translated {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: black;
+  margin-top: 4rem;
+  padding: 2rem;
+}
+.translated-list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
