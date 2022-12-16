@@ -9,14 +9,18 @@ import { storageSave } from "../utils/storage";
 import { STORAGE_KEY_USER } from "../const/storageKeys";
 
 const TranslationPage = () => {
-  const [inputPhrase, setInputPhrase] = useState();
+  const [inputPhrase, setInputPhrase] = useState("");
   const { user, setUser } = useUser();
 
-  const handleTranslateClicked = async () => {
+  const handleTranslateClicked = async (phrase) => {
+    console.log(phrase);
+    setInputPhrase(phrase);
+    console.log(inputPhrase);
     if (!inputPhrase) {
       alert("Please enter a phrase");
       return;
     }
+
     const [error, updatedUser] = await translationAdd(user, inputPhrase);
     if (error !== null) {
       //Something went wrong
@@ -32,7 +36,7 @@ const TranslationPage = () => {
     <div className="container">
       <h2 className="headerh2 mb-5">What do you want to translate?</h2>
       <TranslationForm
-        setInputPhrase={setInputPhrase}
+        // setInputPhrase={setInputPhrase}
         onTranslate={handleTranslateClicked}
         className="container"
       />

@@ -154,9 +154,12 @@ const TranslationResult = ({ inputPhrase }) => {
     );
   });
 
-  // }
-
-  return <section className="translated">{translated}</section>;
+  return (
+    <section className="translated">
+      <h3 className="mb-5">{inputPhrase}</h3>
+      <div className="sign-list">{translated}</div>
+    </section>
+  );
 };
 
 export default TranslationResult;

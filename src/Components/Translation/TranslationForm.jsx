@@ -1,15 +1,16 @@
 import { useForm } from "react-hook-form";
 
-const TranslationForm = ({ setInputPhrase, onTranslate }) => {
+const TranslationForm = ({ onTranslate }) => {
   const {
     register,
     handleSubmit,
+    reset,
     // formState: { errors },
   } = useForm();
 
   const onSubmit = ({ phrase }) => {
     onTranslate(phrase);
-    setInputPhrase(phrase);
+    reset();
   };
 
   return (

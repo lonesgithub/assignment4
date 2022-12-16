@@ -29,9 +29,10 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   background-color: $eton-blue;
-  height: 5rem;
+  height: auto;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -39,11 +40,13 @@ nav {
 ul {
   display: flex;
   align-items: center;
+  justify-self: center;
   list-style: none;
   margin-bottom: 0 !important;
+  padding: 0;
 }
 li {
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 nav li a {
@@ -68,7 +71,7 @@ footer {
   height: 5rem;
 }
 .headerh1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-family: "Patrick Hand", cursive;
 }
 .headerh2 {
@@ -79,7 +82,10 @@ footer {
   font-size: 2rem;
   font-family: "Patrick Hand", cursive;
 }
-
+.nav-header-logo {
+  display: flex;
+  align-items: center;
+}
 .input-translation {
   min-height: 3rem;
   margin-right: 2rem;
@@ -115,6 +121,17 @@ footer {
 .btns:hover {
   background-color: $orange-peel;
 }
+.clear {
+  background-color: $cambridge-blue;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 5px 20px 5px;
+  border-color: $cambridge-blue;
+  height: 3rem;
+}
+.clear:hover {
+  background-color: $eton-blue-2;
+}
 
 .pagetemplate {
   display: flex;
@@ -147,7 +164,20 @@ footer {
   background-color: $pale-spring-bud;
   min-height: calc(100vh - 10rem);
 }
-.translated,
+.translated {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: $pale-spring-bud-2;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: black;
+  margin-top: 4rem;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
 .translation-history {
   display: flex;
   flex-wrap: wrap;
@@ -166,6 +196,14 @@ footer {
   flex-direction: column;
   text-align: left;
   align-items: flex-start;
+  padding-left: 0;
+}
+
+.sign-list {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
   padding-left: 0;
 }
 .translation-history-container {
