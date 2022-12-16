@@ -9,10 +9,12 @@ const ProfileTranslationHistory = ({ translations }) => {
   ));
 
   return (
-    <section>
+    <section className="translation-history-container">
       <h3 className="headerh3 mt-5 mb-3">Your translation history</h3>
-      {translationList.length === 0 && <p>No translations to recall.</p>}
-      <ul className="translated-list">{translationList}</ul>
+      <div className="translation-history">
+        {translationList.length === 0 && <p>No translations to recall.</p>}
+        <ul className="translated-list">{translationList}</ul>
+      </div>
     </section>
   );
 };

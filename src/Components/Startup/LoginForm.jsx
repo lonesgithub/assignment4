@@ -30,7 +30,7 @@ const LoginForm = () => {
 
   useEffect(() => {
     if (user !== null) {
-      navigate("/profile");
+      navigate("/translation");
     }
   }, [user, navigate]); // if empty depemendency  - only run once. Now each time user changes and when navigate changes
 
@@ -67,14 +67,17 @@ const LoginForm = () => {
 
   return (
     <>
-      <h2>What is your name?</h2>
+      <h3 className="mb-4">What is your name?</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <fieldset>
-          <label htmlFor="username">Username:</label>
+          <label hidden htmlFor="username">
+            Username:
+          </label>
           <input
             type="text"
             {...register("username", usernameConfig)}
             placeholder="johndoe"
+            className="input-name px-4 mb-4"
           />
           {errorMessage}
         </fieldset>

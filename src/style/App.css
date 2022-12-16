@@ -18,7 +18,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #98c9a3ff;
+  background-color: #72b3e8;
   height: 5rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -55,7 +55,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #98c9a3ff;
+  background-color: #72b3e8;
   height: 5rem;
 }
 
@@ -77,21 +77,38 @@ footer {
 .input-translation {
   min-height: 3rem;
   margin-right: 2rem;
-  width: 100%;
+  width: 90%;
   border-radius: 50px;
+  background-color: #e7ffdf;
+}
+
+.input-name {
+  min-height: 3rem;
+  margin-right: 2rem;
+  width: 60%;
+  border-radius: 50px;
+  background-color: #e7ffdf;
+}
+
+.profile-button-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .btns {
-  background-color: #ffbf69ff;
+  background-color: #f6b45f;
   padding-left: 1rem;
   padding-right: 1rem;
   border-radius: 5px 20px 5px;
-  border-color: #ff9f1cff;
+  border-color: #fbb64e;
   height: 3rem;
 }
 
 .btns:hover {
-  background-color: #ff9f1cff;
+  background-color: #fbb64e;
 }
 
 .pagetemplate {
@@ -99,34 +116,54 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #edeec9ff;
+  background-color: #d5ffc7;
   min-height: calc(100vh - 10rem);
+}
+
+.logo-container {
+  position: relative;
+}
+
+.splash {
+  z-index: -1;
+  position: absolute;
+  top: 80%;
+  left: 20%;
 }
 
 .profilepage {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #edeec9ff;
+  background-color: #d5ffc7;
   min-height: calc(100vh - 10rem);
 }
 
-.translated {
+.translated,
+.translation-history {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: white;
+  background-color: #e7ffdf;
   border-width: 1px;
   border-style: solid;
   border-radius: 5px;
   border-color: black;
   margin-top: 4rem;
   padding: 2rem;
+  margin-bottom: 4rem;
 }
 
 .translated-list {
   display: flex;
   flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  padding-left: 0;
+}
+
+.translation-history-container {
+  min-width: 60%;
 }
 
 @media (prefers-reduced-motion: no-preference) {

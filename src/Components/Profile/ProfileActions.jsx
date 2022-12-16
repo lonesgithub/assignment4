@@ -36,7 +36,7 @@ const ProfileActions = () => {
   };
 
   return (
-    <ul>
+    <ul className="profile-button-group">
       <li>
         <button onClick={handleClearHistoryClick} className="btns">
           Clear history

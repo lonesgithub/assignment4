@@ -2,13 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&display=swap");
 
 /* SCSS HEX */
-$pale-spring-bud: #edeec9ff;
-$pale-spring-bud-2: #dde7c7ff;
+$pale-spring-bud: hsl(105, 100%, 89%);
+$pale-spring-bud-2: #e7ffdf;
 $cambridge-blue: #bfd8bdff;
-$eton-blue: #98c9a3ff;
+$eton-blue: #72b3e8;
 $eton-blue-2: #77bfa3ff;
-$orange-peel: #ff9f1cff;
-$mellow-apricot: #ffbf69ff;
+$orange-peel: rgb(251, 182, 78);
+$mellow-apricot: rgb(246, 180, 95);
 $white: #ffffffff;
 $light-cyan: #cbf3f0ff;
 $tiffany-blue: #2ec4b6ff;
@@ -83,8 +83,25 @@ footer {
 .input-translation {
   min-height: 3rem;
   margin-right: 2rem;
-  width: 100%;
+  width: 90%;
   border-radius: 50px;
+  background-color: $pale-spring-bud-2;
+}
+
+.input-name {
+  min-height: 3rem;
+  margin-right: 2rem;
+  width: 60%;
+  border-radius: 50px;
+  background-color: $pale-spring-bud-2;
+}
+
+.profile-button-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .btns {
@@ -107,7 +124,22 @@ footer {
   background-color: $pale-spring-bud;
   min-height: calc(100vh - 10rem);
 }
+// .logo-startpage {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+// }
 
+.logo-container {
+  position: relative;
+}
+
+.splash {
+  z-index: -1;
+  position: absolute;
+  top: 80%;
+  left: 20%;
+}
 .profilepage {
   display: flex;
   flex-direction: column;
@@ -115,21 +147,29 @@ footer {
   background-color: $pale-spring-bud;
   min-height: calc(100vh - 10rem);
 }
-.translated {
+.translated,
+.translation-history {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: white;
+  background-color: $pale-spring-bud-2;
   border-width: 1px;
   border-style: solid;
   border-radius: 5px;
   border-color: black;
   margin-top: 4rem;
   padding: 2rem;
+  margin-bottom: 4rem;
 }
 .translated-list {
   display: flex;
   flex-direction: column;
+  text-align: left;
+  align-items: flex-start;
+  padding-left: 0;
+}
+.translation-history-container {
+  min-width: 60%;
 }
 
 @media (prefers-reduced-motion: no-preference) {

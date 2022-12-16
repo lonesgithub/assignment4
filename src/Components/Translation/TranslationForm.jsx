@@ -30,7 +30,7 @@ const TranslationForm = ({ setInputPhrase, onTranslate }) => {
         />
       </fieldset>
       <button type="submit" className="btns col-8 col-md-3  mx-sm-0">
-        Translate now
+        Translate
       </button>
     </form>
   );
