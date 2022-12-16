@@ -10,9 +10,9 @@ const ProfileTranslationHistory = ({ translations }) => {
 
   return (
     <section>
-      <h4>Your translation history</h4>
-      {translationList.length === 0 && <p>No ordrers in list</p>}
-      <ul>{translationList}</ul>
+      <h3 className="headerh3 mt-5 mb-3">Your translation history</h3>
+      {translationList.length === 0 && <p>No translations to recall.</p>}
+      <ul className="translated-list">{translationList}</ul>
     </section>
   );
 };

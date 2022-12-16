@@ -2,7 +2,6 @@ import PageTemplate from "./PageTemplate";
 import TranslationResult from "../Components/Translation/TranslationResult";
 import withAuth from "../HigherOrderComponents/withAuth";
 import TranslationForm from "../Components/Translation/TranslationForm";
-import SignItem from "../Components/Translation/SignItem";
 import { useState } from "react";
 import { useUser } from "../Context/UserContext";
 import { translationAdd } from "../api/translate";
