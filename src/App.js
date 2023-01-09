@@ -11,12 +11,15 @@ import PageTemplate from "./Pages/PageTemplate";
 import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
+  //  test if environment-variable is working:
+  //   console.log(process.env.REACT_APP_API_KEY);
+
   return (
     <BrowserRouter>
       <div className="App">
         {/* <Header /> */}
         <Navbar />
-        <Routes>
+        <Routes className="container-fluid">
           <Route path="/" element={<StartupPage />} />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/translation" element={<TranslationPage />} />

@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import { STORAGE_KEY_USER } from "../const/storageKeys";
 import { storageRead } from "../utils/storage";
-//Context  -> exposing state
+//Context  -> exposing the state
 
 const UserContext = createContext();
 
@@ -9,7 +9,7 @@ const UserContext = createContext();
 export const useUser = () => {
   return useContext(UserContext); //exposing the value, providing the state in the userContext // returns object: {user,setUser}
 };
-//Provider -> managing state
+//Provider -> managing the state
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(storageRead(STORAGE_KEY_USER)); //no user when app starts
 

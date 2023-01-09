@@ -70,10 +70,21 @@ footer {
   background-color: $eton-blue;
   height: 5rem;
 }
+
 .headerh1 {
   font-size: 3.5rem;
   font-family: "Patrick Hand", cursive;
 }
+
+.logoName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logoName h1 {
+  color: black;
+}
+
 .headerh2 {
   font-size: 3rem;
   font-family: "Patrick Hand", cursive;
@@ -93,7 +104,6 @@ footer {
   border-radius: 50px;
   background-color: $pale-spring-bud-2;
 }
-
 .input-name {
   min-height: 3rem;
   margin-right: 2rem;
@@ -132,6 +142,9 @@ footer {
 .clear:hover {
   background-color: $eton-blue-2;
 }
+a {
+  text-decoration: none !important;
+}
 
 .pagetemplate {
   display: flex;
@@ -167,7 +180,7 @@ footer {
 .translated {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+
   justify-content: center;
   background-color: $pale-spring-bud-2;
   border-width: 1px;
@@ -202,7 +215,6 @@ footer {
 .sign-list {
   display: flex;
   justify-content: center;
-
   align-items: center;
   padding-left: 0;
 }
@@ -225,4 +237,9 @@ footer {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+div img {
+  width: 30px;
+  height: 30px;
 }

@@ -156,7 +156,7 @@ const TranslationResult = ({ inputPhrase }) => {
 
   return (
     <section className="translated">
-      <h3 className="mb-5">{inputPhrase}</h3>
+      <h4 className="mb-5">{inputPhrase}</h4>
       <div className="sign-list">{translated}</div>
     </section>
   );

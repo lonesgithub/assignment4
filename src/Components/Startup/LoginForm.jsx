@@ -15,10 +15,11 @@ const usernameConfig = {
 const LoginForm = () => {
   //HOOKS
   const {
-    register,
+    register, //to register inputs in our form
     handleSubmit, //handleSubmit from useForm prevents form from reloading and collects all data from input related to register used and passes the result to onSubmit as data
-    formState: { errors },
-  } = useForm();
+    formState: { errors }, // restructuring errors from formstate
+  } = useForm(); // no arguments needed, but needs destructuring.
+
   const { user, setUser } = useUser();
   const navigate = useNavigate();
 
@@ -27,12 +28,11 @@ const LoginForm = () => {
   const [apiError, setApiError] = useState(null);
 
   //SIDE EFFECTS
-
   useEffect(() => {
     if (user !== null) {
       navigate("/translation");
     }
-  }, [user, navigate]); // if empty depemendency  - only run once. Now each time user changes and when navigate changes
+  }, [user, navigate]); // if empty dependency  - only run once. Now each time user changes and when navigate changes
 
   //EVENT HANDLERS
   const onSubmit = async ({ username }) => {
@@ -47,7 +47,7 @@ const LoginForm = () => {
       setUser(userResponse);
     }
 
-    //logging in is complete here
+    //logging in is completed here
     setLoading(false);
   };
 
@@ -55,7 +55,7 @@ const LoginForm = () => {
   const errorMessage = (() => {
     //error message will be an object. Function is automatically invoked everytime it is rendered
     if (!errors.username) {
-      return null;
+      return null; //renders null as a component is perfectly ok in react. Element is just ignored.
     }
     if (errors.username.type === "required") {
       return <span>Username is required</span>;
@@ -79,7 +79,7 @@ const LoginForm = () => {
             placeholder="johndoe"
             className="input-name px-4 mb-4"
           />
-          {errorMessage}
+          {errorMessage} {/* this is not a function, but an object */}
         </fieldset>
         <button type="submit" disabled={loading} className="btns">
           Continue

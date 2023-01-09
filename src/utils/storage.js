@@ -1,5 +1,5 @@
 export const storageSave = (key, value) => {
-  //global object
+  //localStorage and sessionStorage er globalt object pga browser
   //built in object, no need to import or install
 
   if (!key || typeof key !== "string") {
@@ -21,7 +21,7 @@ export const storageRead = (key) => {
   if (data) {
     return JSON.parse(data); //transforms string back to object
   }
-  return null;
+  return null; //if data is not existing, return null
 };
 
 export const storageDelete = (key) => {

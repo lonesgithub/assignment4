@@ -2,26 +2,24 @@ import PageTemplate from "./PageTemplate";
 import TranslationResult from "../Components/Translation/TranslationResult";
 import withAuth from "../HigherOrderComponents/withAuth";
 import TranslationForm from "../Components/Translation/TranslationForm";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useUser } from "../Context/UserContext";
 import { translationAdd } from "../api/translate";
 import { storageSave } from "../utils/storage";
 import { STORAGE_KEY_USER } from "../const/storageKeys";
 
 const TranslationPage = () => {
-  const [inputPhrase, setInputPhrase] = useState("");
+  const [inputPhrase, setInputPhrase] = useState(null);
   const { user, setUser } = useUser();
 
   const handleTranslateClicked = async (phrase) => {
-    console.log(phrase);
     setInputPhrase(phrase);
-    console.log(inputPhrase);
-    if (!inputPhrase) {
+    if (!phrase) {
       alert("Please enter a phrase");
       return;
     }
 
-    const [error, updatedUser] = await translationAdd(user, inputPhrase);
+    const [error, updatedUser] = await translationAdd(user, phrase);
     if (error !== null) {
       //Something went wrong
       return;

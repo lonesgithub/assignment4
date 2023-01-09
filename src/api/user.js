@@ -1,10 +1,10 @@
 import { createHeaders } from "./index";
 
-const apiUrl = process.env.REACT_APP_API_URL;
+const apiUrl = process.env.REACT_APP_API_URL; //need to stop and restart server if you create a new enivornment-variable
 
 //Check if user exists
 const checkForUser = async (username) => {
-  //Allways try catch when using async
+  //Allways try catch when using async await
 
   try {
     const response = await fetch(`${apiUrl}?username=${username}`); //querystring
@@ -24,10 +24,11 @@ const checkForUser = async (username) => {
 const createUser = async (username) => {
   try {
     const response = await fetch(apiUrl, {
+      //second argument is a configuration-object:
       method: "POST", //because we shall post something, here user
       headers: createHeaders(), // returns a new object that become the header
       body: JSON.stringify({
-        //cant send object with fetch.Http does not understand js, only understand strings. Json turning object into string
+        //can't send object with fetch.Http does not understand js, only understand strings. Json turning object into string
         username, //input from user
         translations: [], //new user needs to start with empty array of translations
       }),
@@ -50,10 +51,10 @@ export const loginUser = async (username) => {
 
   // if nothing went wrong, return null and the user
   if (user.length > 0) {
-    return [null, user.pop()];
+    return [null, user.pop()]; //null represents error, second arg: user
   }
 
-  return await createUser(username);
+  return await createUser(username); //returnerer enten userdata eller null
 };
 
 export const userById = async (userId) => {

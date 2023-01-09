@@ -67,6 +67,16 @@ footer {
   font-family: "Patrick Hand", cursive;
 }
 
+.logoName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoName h1 {
+  color: black;
+}
+
 .headerh2 {
   font-size: 3rem;
   font-family: "Patrick Hand", cursive;
@@ -132,6 +142,10 @@ footer {
   background-color: #77bfa3ff;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 .pagetemplate {
   display: flex;
   flex-direction: column;
@@ -163,7 +177,6 @@ footer {
 .translated {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   background-color: #e7ffdf;
   border-width: 1px;
@@ -222,6 +235,11 @@ footer {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+div img {
+  width: 30px;
+  height: 30px;
 }
 
 /*# sourceMappingURL=App.css.map */
